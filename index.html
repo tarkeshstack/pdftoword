@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wordy — turn a PDF back into editable word document</title>
+<title>Wordy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
@@ -610,7 +610,7 @@ const suggestText = document.getElementById('suggestText');
 const suggestThanks = document.getElementById('suggestThanks');
 
 // Change this to update where donations go — no code changes needed elsewhere.
-const UPI_ID = '12345678@upi';
+const UPI_ID = 'tarkeshwarkr1@ybl';
 const UPI_PAYEE_NAME = 'Wordy';
 
 let currentFile = null;
@@ -1074,7 +1074,7 @@ let donationPending = false;
 document.querySelectorAll('.donate-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const amt = btn.getAttribute('data-amt');
-    const link = `tarkeshwarkr1@ybl://pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent(UPI_PAYEE_NAME)}&am=${amt}&cu=INR&tn=${encodeURIComponent('Support ' + UPI_PAYEE_NAME)}`;
+    const link = `upi://pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent(UPI_PAYEE_NAME)}&am=${amt}&cu=INR&tn=${encodeURIComponent('Support ' + UPI_PAYEE_NAME)}`;
     donationPending = true;
     window.location.href = link;
   });
