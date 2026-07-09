@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wordy — turn a PDF back into words you can edit</title>
+<title>Wordy — turn a PDF back into editable word document</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
@@ -485,13 +485,13 @@
 <div class="wrap">
 
   <header class="top">
-    <div class="wordmark">Word<em>y</em></div>
+    <div class="wordmark">Word<em>y</em> by Tarkesh</div>
     <div class="top-note">runs entirely in<br>your browser</div>
   </header>
 
   <section class="hero">
     <h1>Turn a PDF back<br>into <i>words you can edit.</i></h1>
-    <p>Drop in a PDF and Wordy lifts the text back out — fonts, sizes and grid tables intact — page by page, into a file Word will open. No uploads, no waiting on a server — the whole conversion happens right here.</p>
+    <p> No uploads, No Waiting, Format Intact</p>
   </section>
 
   <div class="sheet">
@@ -503,7 +503,7 @@
         <line x1="13" y1="22" x2="25" y2="22" stroke="#DDD6C7" stroke-width="1.2"/>
         <line x1="13" y1="26" x2="21" y2="26" stroke="#DDD6C7" stroke-width="1.2"/>
       </svg>
-      <div class="cta">Click to choose a PDF, or drag one in</div>
+      <div class="cta">Click to choose or drag your pdf</div>
       <div class="sub">.PDF · TEXT-BASED PAGES ONLY</div>
       <input type="file" id="fileInput" accept="application/pdf">
     </div>
@@ -1074,7 +1074,7 @@ let donationPending = false;
 document.querySelectorAll('.donate-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const amt = btn.getAttribute('data-amt');
-    const link = `upi://pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent(UPI_PAYEE_NAME)}&am=${amt}&cu=INR&tn=${encodeURIComponent('Support ' + UPI_PAYEE_NAME)}`;
+    const link = `tarkeshwarkr1@ybl://pay?pa=${encodeURIComponent(UPI_ID)}&pn=${encodeURIComponent(UPI_PAYEE_NAME)}&am=${amt}&cu=INR&tn=${encodeURIComponent('Support ' + UPI_PAYEE_NAME)}`;
     donationPending = true;
     window.location.href = link;
   });
